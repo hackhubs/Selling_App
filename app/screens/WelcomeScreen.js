@@ -1,20 +1,24 @@
 import React from 'react';
 import { ImageBackground, View, Text, Image, StyleSheet } from 'react-native';
 
-import AppText from '../components/AppText';
+// import AppText from '../components/AppText';
+import AppButton from '../components/AppButton';
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
+      blurRadius={3}
       source={require('../assets/background.jpg')}
       style={styles.background}
     >
       <View style={styles.logocontainer}>
         <Image source={require('../assets/logo-red.png')} style={styles.logo} />
-        <AppText>Welcome</AppText>
+        <Text style={styles.tagtext}>Welcome</Text>
       </View>
-      <View style={styles.loginButton} />
-      <View style={styles.registerButton} />
+      <View style={styles.buttonContainer}>
+        <AppButton title="Login" />
+        <AppButton title="Register" color="secondary" />
+      </View>
     </ImageBackground>
   );
 }
@@ -32,15 +36,13 @@ const styles = StyleSheet.create({
   logocontainer: {
     bottom: 400,
   },
-  loginButton: {
-    backgroundColor: 'blue',
+  buttonContainer: {
+    padding: 1,
     width: '100%',
-    height: 50,
   },
-  registerButton: {
-    backgroundColor: 'yellow',
-    width: '100%',
-    height: 50,
+  tagtext: {
+    fontSize: 25,
+    fontWeight: '600',
   },
 });
 
