@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8c45f52c-7ac9-465a-b093-e24ea59c30ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppText.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/VeiwImageScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/VeiwImageScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +50,8 @@
       <workItem from="1608044179079" duration="9000" />
       <workItem from="1608209540288" duration="30000" />
       <workItem from="1608209583888" duration="64000" />
+      <workItem from="1608281170127" duration="659000" />
+      <workItem from="1608316400575" duration="33000" />
     </task>
     <servers />
   </component>

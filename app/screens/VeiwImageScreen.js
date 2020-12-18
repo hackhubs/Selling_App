@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import AppText from '../components/AppText';
 import colors from '../config/colors';
@@ -7,8 +8,12 @@ import colors from '../config/colors';
 function VeiwImageScreen(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.closeIcon} />
-      <View style={styles.deleteIcon} />
+      <View style={styles.closeIcon}>
+        <MaterialCommunityIcons name="close" color="white" size={35} />
+      </View>
+      <View style={styles.deleteIcon}>
+        <MaterialCommunityIcons name="delete" color="white" size={35} />
+      </View>
       <Image
         style={styles.image}
         resizeMode="contain"
@@ -24,17 +29,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   closeIcon: {
-    backgroundColor: colors.primary,
-    width: 50,
-    height: 50,
     position: 'absolute',
-    top: 24,
+    top: 30,
     left: 20,
   },
   deleteIcon: {
-    backgroundColor: colors.secondary,
-    width: 50,
-    height: 50,
     position: 'absolute',
     top: 24,
     right: 20,
