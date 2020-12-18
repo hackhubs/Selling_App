@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     width: '100%',
     padding: 15,
-    marginVertical: 5,
+    marginVertical: 15,
   },
   text: {
     fontSize: 20,
