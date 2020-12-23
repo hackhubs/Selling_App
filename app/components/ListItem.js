@@ -26,7 +26,7 @@ function ListItem({
     >
       <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
         <View style={styles.listItem}>
-          <Image style={styles.image} source={image} />
+          {image && <Image style={styles.image} source={image} />}
           <View>
             <AppText style={styles.title}>{title}</AppText>
             <AppText style={styles.subtitle}>{subtitle}</AppText>

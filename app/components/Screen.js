@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
         left: 2,
       },
     }),
-
     flex: 1,
+    backgroundColor: '#ebebeb',
   },
 });
 
