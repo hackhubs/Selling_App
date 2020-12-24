@@ -2,8 +2,8 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, Platform } from 'react-native';
 import Constants from 'expo-constants';
 
-function Screen({ children }) {
-  return <SafeAreaView style={styles.screen}>{children}</SafeAreaView>;
+function Screen({ children, style }) {
+  return <SafeAreaView style={[styles.screen, style]}>{children}</SafeAreaView>;
 }
 
 const styles = StyleSheet.create({
@@ -13,12 +13,12 @@ const styles = StyleSheet.create({
         padding: Constants.statusBarHeight,
       },
       android: {
-        paddingTop: 30,
+        paddingTop: 33,
         left: 2,
       },
     }),
     flex: 1,
-    backgroundColor: '#ebebeb',
+    backgroundColor: '#f0f0f0',
   },
 });
 
