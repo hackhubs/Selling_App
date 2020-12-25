@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c45f52c-7ac9-465a-b093-e24ea59c30ff" name="Default Changelist" comment="" />
+    <list default="true" id="8c45f52c-7ac9-465a-b093-e24ea59c30ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/screens/AccountScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/AccountScreen.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +49,7 @@
       <workItem from="1608281170127" duration="659000" />
       <workItem from="1608316400575" duration="33000" />
       <workItem from="1608703133615" duration="85000" />
+      <workItem from="1608830944480" duration="164000" />
     </task>
     <servers />
   </component>

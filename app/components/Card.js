@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   subtitle: {
-    color: colors.secondary,
+    color: colors.subtitle,
     fontWeight: '600',
   },
   title: {

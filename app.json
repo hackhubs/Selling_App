@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "ExpoProject",
+    "name": "Sellify",
     "slug": "ExpoProject",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
-    }
+    },
+    "description": "This app is for selling second hand items",
+    "githubUrl": "https://github.com/hackhubs/Selling_App"
   }
 }

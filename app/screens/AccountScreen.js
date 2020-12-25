@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, FlatList, Image } from 'react-native';
+import { Ionicons, Feather } from '@expo/vector-icons';
 
 import Icon from '../components/Icon';
 import ListItem from '../components/ListItem';
@@ -10,15 +11,8 @@ const menuItems = [
   {
     title: 'My Purchase',
     icon: {
-      name: 'shopping',
+      name: 'shopping-bag',
       backgroundColor: colors.primary,
-    },
-  },
-  {
-    title: 'My Messages',
-    icon: {
-      name: 'message-text',
-      backgroundColor: colors.secondary,
     },
   },
 ];
@@ -36,27 +30,31 @@ function AccountScreen() {
           source={require('../assets/aanya.png')}
         />
       </View>
-      <ListItem
-        title="Edit Profile"
-        style={{ fontSize: 16 }}
-        IconComponent={<Icon name="account-edit" size={28} />}
-      />
+      <View style={styles.details}>
+        <ListItem
+          title="Edit Profile"
+          style={{ fontSize: 16 }}
+          IconComponent={<Icon name="account-edit" size={28} />}
+        />
+      </View>
 
       <View style={styles.detailContainer}>
         <ListItem
           title="Aanya Jain"
-          IconComponent={
-            <Icon name="account" backgroundColor={colors.secondary} />
-          }
+          IconComponent={<Feather name="user" size={28} color="black" />}
         />
         <ListItem
           title="jainaanya2000@gmail.com"
-          IconComponent={<Icon name="email" backgroundColor={colors.primary} />}
+          IconComponent={<Feather name="mail" size={28} color="black" />}
         />
         <ListItem
           title="9418455461"
+          IconComponent={<Feather name="phone-call" size={28} color="black" />}
+        />
+        <ListItem
+          title="Himchal Pradesh"
           IconComponent={
-            <Icon name="phone-in-talk" backgroundColor={colors.secondary} />
+            <Ionicons name="location-outline" size={28} color="black" />
           }
         />
         <FlatList
@@ -66,13 +64,21 @@ function AccountScreen() {
             <ListItem
               title={item.title}
               IconComponent={
-                <Icon
+                <Feather
                   name={item.icon.name}
                   backgroundColor={item.icon.backgroundColor}
+                  size={28}
                 />
               }
             />
           )}
+        />
+      </View>
+      <View style={styles.details}>
+        <ListItem
+          title="Log Out"
+          style={{ fontSize: 16 }}
+          IconComponent={<Icon name="logout" size={28} />}
         />
       </View>
     </Screen>
@@ -85,7 +91,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 8,
   },
-  detailContainer: {},
+  details: {
+    backgroundColor: 'white',
+    width: 350,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 40,
+    left: 15,
+  },
 });
 
 export default AccountScreen;

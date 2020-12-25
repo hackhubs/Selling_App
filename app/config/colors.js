@@ -6,4 +6,6 @@ export default {
   medium: '#6e6969',
   light: '#f1f1f1',
   yellow: '#e3e300',
+  text: '#fccb45',
+  subtitle: '#f9b508',
 };
