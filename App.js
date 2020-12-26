@@ -1,6 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { View } from 'react-native';
+import { TextInput, View } from 'react-native';
 
 import Card from './app/components/Card';
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -14,5 +14,13 @@ import Screen from './app/components/Screen';
 import ListingsScreen from './app/screens/ListingsScreen';
 
 export default function App() {
-  return <ListingsScreen />;
+  return (
+    <Screen style={{ backgroundColor: 'white', top: 20 }}>
+      <TextInput
+        placeholder="First Name"
+        style={{ borderBottomColor: 'yellow', borderBottomWidth: 1 }}
+      />
+    </Screen>
+    // <MessagesScreen />
+  );
 }

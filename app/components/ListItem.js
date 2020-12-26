@@ -16,22 +16,27 @@ function ListItem({
   subtitle,
   image,
   IconComponent,
+  IconrightComponent,
   onPress,
   renderRightActions,
   style,
+  style1,
+  time,
 }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
-        <View style={styles.container}>
+        <View style={[styles.container, style]}>
           {IconComponent}
           {image && <Image style={styles.image} source={image} />}
+          <AppText style={{}}>{time}</AppText>
           <View style={styles.detailsContainer}>
-            <AppText style={[styles.title, style]}>{title}</AppText>
+            <AppText style={[styles.title, style1]}>{title}</AppText>
             {subtitle && (
-              <AppText style={[styles.subtitle, style]}>{subtitle}</AppText>
+              <AppText style={[styles.subtitle, style1]}>{subtitle}</AppText>
             )}
           </View>
+          <View style={{ position: 'absolute' }}>{IconrightComponent}</View>
         </View>
       </TouchableHighlight>
     </Swipeable>
@@ -48,13 +53,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image: {
-    width: 70,
-    height: 70,
+    width: 62,
+    height: 62,
     borderRadius: 35,
   },
   subtitle: {
     color: colors.medium,
-    fontSize: 18,
+    fontSize: 16,
   },
   title: {
     fontWeight: '500',

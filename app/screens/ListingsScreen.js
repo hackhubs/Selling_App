@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button, FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 import { Searchbar } from 'react-native-paper';
 
 import Screen from '../components/Screen';
 import Card from '../components/Card';
 import colors from '../config/colors';
+import Icon from '../components/Icon';
 
 const listings = [
   {
@@ -44,7 +45,7 @@ const listings = [
 function ListingsScreen(props) {
   return (
     <Screen style={styles.screen}>
-      <View style={{ bottom: 20 }}>
+      <View style={{ bottom: 15 }}>
         <Searchbar
           placeholder="Search"
           onIconPress={() => console.log('press search')}
@@ -60,7 +61,10 @@ function ListingsScreen(props) {
             subtitle={'Rs' + ' ' + item.price + '.00'}
             image={item.image}
             username={'Posted By:' + ' ' + item.username}
-            location={'🏠' + ' ' + item.location}
+            IconComponent={<Icon name="map-marker-right-outline" size={22} />}
+            location={item.location}
+            details={'View Details ▶'}
+            onPress={() => console.log('listing Screen', item)}
           />
         )}
       />
@@ -70,9 +74,10 @@ function ListingsScreen(props) {
 
 const styles = StyleSheet.create({
   screen: {
-    padding: 15,
+    padding: 7,
     backgroundColor: colors.light,
-    marginTop: 25,
+    marginTop: 5,
+    marginBottom: 15,
   },
 });
 

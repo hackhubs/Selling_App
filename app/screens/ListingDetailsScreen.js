@@ -13,6 +13,7 @@ function ListingDetailsScreen() {
         <AppText style={styles.title}>Red jacket for sale</AppText>
         <AppText style={styles.price}>$ 100</AppText>
         <ListItem
+          style={{ right: 12 }}
           image={require('../assets/mosh.jpg')}
           title="Mosh hamdeni"
           subtitle="5 Listings"
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
     height: 300,
   },
   detailContainer: {
-    padding: 20,
+    padding: 15,
   },
   title: {
     fontSize: 24,

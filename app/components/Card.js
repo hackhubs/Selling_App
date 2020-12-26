@@ -1,28 +1,48 @@
 import React from 'react';
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Image,
+  Text,
+  TouchableHighlight,
+} from 'react-native';
 
 import colors from '../config/colors';
 import AppText from '../components/AppText';
-import AppButton from '../components/AppButton';
 
-function Card({ title, subtitle, image, username, location }) {
+function Card({
+  title,
+  subtitle,
+  image,
+  username,
+  location,
+  details,
+  onPress,
+  IconComponent,
+}) {
   return (
-    <View style={styles.card}>
-      <Image style={styles.image} source={image} />
+    <TouchableHighlight
+      underlayColor={colors.light}
+      // style={styles.details}
+      onPress={onPress}
+    >
+      <View style={styles.card}>
+        <Image style={styles.image} source={image} />
 
-      <View style={styles.detailContainer}>
-        <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subtitle}>{subtitle}</AppText>
-        <TouchableOpacity
-          onPress={() => console.log('Preesed Details')}
-          style={styles.details}
-        >
-          <Text>View Details ▶</Text>
-        </TouchableOpacity>
-        <AppText style={styles.user}>{username}</AppText>
-        <AppText style={styles.user}>{location}</AppText>
+        <View style={styles.detailContainer}>
+          <AppText style={styles.title}>{title}</AppText>
+          <AppText style={styles.subtitle}>{subtitle}</AppText>
+
+          <Text style={styles.details}>{details}</Text>
+
+          <AppText style={styles.user}>{username}</AppText>
+          <View style={{ flexDirection: 'row' }}>
+            {IconComponent}
+            <AppText style={styles.userlocation}>{location}</AppText>
+          </View>
+        </View>
       </View>
-    </View>
+    </TouchableHighlight>
   );
 }
 
@@ -43,23 +63,31 @@ const styles = StyleSheet.create({
   subtitle: {
     color: colors.subtitle,
     fontWeight: '600',
-    top: 8,
+    top: 18,
   },
   title: {
-    marginBottom: -20,
+    marginBottom: -24,
     bottom: 10,
   },
   user: {
     fontSize: 13,
     top: -3,
   },
+
+  userlocation: {
+    fontSize: 13,
+  },
+
   details: {
-    backgroundColor: 'lightblue',
+    backgroundColor: '#2730ff',
     borderRadius: 60,
+    left: 225,
     width: 110,
-    marginLeft: 220,
     top: 30,
     padding: 5,
+    color: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

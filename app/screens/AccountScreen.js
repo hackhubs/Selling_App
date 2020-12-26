@@ -33,8 +33,8 @@ function AccountScreen() {
       <View style={styles.details}>
         <ListItem
           title="Edit Profile"
-          style={{ fontSize: 16 }}
-          IconComponent={<Icon name="account-edit" size={28} />}
+          style1={{ fontSize: 16 }}
+          IconComponent={<Icon name="account-edit" size={30} />}
         />
       </View>
 
@@ -77,8 +77,8 @@ function AccountScreen() {
       <View style={styles.details}>
         <ListItem
           title="Log Out"
-          style={{ fontSize: 16 }}
-          IconComponent={<Icon name="logout" size={28} />}
+          style1={{ fontSize: 16 }}
+          IconComponent={<Icon name="logout" size={30} />}
         />
       </View>
     </Screen>
