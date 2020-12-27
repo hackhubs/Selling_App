@@ -4,7 +4,7 @@ export default {
   black: '#000',
   white: '#fff',
   medium: '#6e6969',
-  light: '#f1f1f1',
+  light: '#f9f9f9',
   yellow: '#e3e300',
   text: '#fccb45',
   subtitle: '#f9b508',

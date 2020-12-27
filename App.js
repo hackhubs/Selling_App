@@ -13,11 +13,28 @@ import ListItem from './app/components/ListItem';
 import Screen from './app/components/Screen';
 import ListingsScreen from './app/screens/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
+import AppPicker from './app/components/AppPicker';
+import ItemPicker from './app/components/ItemPicker';
+
+const categories = [
+  { label: 'furniture', value: 1 },
+  { label: 'Clothing', value: 2 },
+  { label: 'Books', value: 3 },
+];
 
 export default function App() {
+  const [category, setcategory] = useState();
   return (
     <Screen>
-      <AppTextInput placeholder="email" icon="email-outline" />
+      {/* <AppPicker
+        selectedItem={category}
+        onSelectedItem={(item) => setcategory(item)}
+        placeholder="Category"
+        icon="apps"
+        items={categories}
+      />
+      <AppTextInput placeholder="email" icon="email-outline" /> */}
+      <ItemPicker />
     </Screen>
   );
 }

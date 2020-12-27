@@ -38,7 +38,8 @@
     "react-native-safe-area-context": "^3.1.9",
     "react-native-web": "~0.13.12",
     "yarn": "^1.22.10",
-    "yup": "^0.32.8"
+    "yup": "^0.32.8",
+    "@react-native-picker/picker": "1.9.2"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 import { Searchbar } from 'react-native-paper';
+import { Feather } from '@expo/vector-icons';
 
 import Screen from '../components/Screen';
 import ListItem from '../components/ListItem';
@@ -84,10 +85,11 @@ function MessagesScreen() {
                   size={30}
                   style={{ left: 355, top: 55 }}
                 />,
-                <Icon
-                  name="chevron-double-left"
-                  size={30}
-                  style={{ left: 340, top: 26 }}
+                <Feather
+                  name="chevrons-left"
+                  size={28}
+                  color="black"
+                  style={{ left: 333, top: 22 }}
                 />,
               ]}
             />

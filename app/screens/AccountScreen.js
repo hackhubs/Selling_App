@@ -19,7 +19,7 @@ const menuItems = [
 
 function AccountScreen() {
   return (
-    <Screen>
+    <Screen style={{ backgroundColor: '#f3f6f3' }}>
       <View style={styles.container}>
         <Image
           style={{
