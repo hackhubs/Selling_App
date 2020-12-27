@@ -1,6 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { TextInput, View } from 'react-native';
+import React, { useState } from 'react';
+import { Text, TextInput, View } from 'react-native';
 
 import Card from './app/components/Card';
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -12,15 +12,12 @@ import AccountScreen from './app/screens/AccountScreen';
 import ListItem from './app/components/ListItem';
 import Screen from './app/components/Screen';
 import ListingsScreen from './app/screens/ListingsScreen';
+import AppTextInput from './app/components/AppTextInput';
 
 export default function App() {
   return (
-    <Screen style={{ backgroundColor: 'white', top: 20 }}>
-      <TextInput
-        placeholder="First Name"
-        style={{ borderBottomColor: 'yellow', borderBottomWidth: 1 }}
-      />
+    <Screen>
+      <AppTextInput placeholder="email" icon="email-outline" />
     </Screen>
-    // <MessagesScreen />
   );
 }
