@@ -1,21 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, StyleSheet, Image, FlatList } from 'react-native';
-import { CheckBox } from 'react-native-elements';
 import { Entypo } from '@expo/vector-icons';
-import { Formik } from 'formik';
 import * as yup from 'yup';
 
-import AppButton from '../components/AppButton';
 import AppText from '../components/AppText';
-import AppTextInput from '../components/AppTextInput';
 import ListItem from '../components/ListItem';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
-import ErrorMessage from '../components/ErrorMessage';
-import AppFormField from '../components/AppFormField';
-import SubmitButton from '../components/SubmitButton';
-import AppCheckBox from '../components/AppCheckBox';
-import AppForm from '../components/AppForm';
+import {
+  AppForm,
+  AppFormField,
+  SubmitButton,
+  AppCheckBox,
+} from '../components/form';
 
 const menuItems = [
   {
