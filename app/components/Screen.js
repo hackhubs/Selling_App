@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
       },
     }),
     flex: 1,
-    backgroundColor: '#f3f3f3',
+    backgroundColor: '#f1f3f1',
   },
 });
 

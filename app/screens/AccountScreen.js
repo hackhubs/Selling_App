@@ -12,7 +12,6 @@ const menuItems = [
     title: 'My Purchase',
     icon: {
       name: 'shopping-bag',
-      backgroundColor: colors.primary,
     },
   },
 ];

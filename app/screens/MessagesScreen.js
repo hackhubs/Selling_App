@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
-import { Searchbar } from 'react-native-paper';
+import { SearchBar } from 'react-native-elements';
 import { Feather } from '@expo/vector-icons';
 
 import Screen from '../components/Screen';
@@ -52,7 +52,7 @@ function MessagesScreen() {
   return (
     <Screen>
       <View style={{ top: 2 }}>
-        <Searchbar
+        <SearchBar
           placeholder="Search"
           onIconPress={() => console.log('press search')}
         />

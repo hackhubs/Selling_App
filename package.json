@@ -12,6 +12,7 @@
     "@react-native-community/hooks": "^2.6.0",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-native-community/netinfo": "5.9.7",
+    "@react-native-picker/picker": "1.9.2",
     "@react-navigation/bottom-tabs": "^5.11.2",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
@@ -32,14 +33,13 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native-elements": "^3.0.1",
     "react-native-gesture-handler": "~1.8.0",
-    "react-native-paper": "^4.5.0",
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-web": "~0.13.12",
     "yarn": "^1.22.10",
-    "yup": "^0.32.8",
-    "@react-native-picker/picker": "1.9.2"
+    "yup": "^0.32.8"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"

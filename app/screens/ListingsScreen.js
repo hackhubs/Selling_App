@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
-import { Searchbar } from 'react-native-paper';
+import { SearchBar } from 'react-native-elements';
 
 import Screen from '../components/Screen';
 import Card from '../components/Card';
@@ -46,7 +46,7 @@ function ListingsScreen(props) {
   return (
     <Screen style={styles.screen}>
       <View style={{ bottom: 15 }}>
-        <Searchbar
+        <SearchBar
           placeholder="Search"
           onIconPress={() => console.log('press search')}
         />
