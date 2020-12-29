@@ -72,12 +72,7 @@ function LoginScreen() {
         <View style={styles.button}>
           <SubmitButton title="Login" />
           <ListItem
-            style={{
-              backgroundColor: 'white',
-              borderRadius: 30,
-            }}
-            style1={{ color: '#0322fc' }}
-            title="Forget Password !"
+            title="Forget Password "
             onPress={() => console.log('Forget Password')}
           />
           <AppText
