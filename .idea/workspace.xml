@@ -6,14 +6,34 @@
   <component name="ChangeListManager">
     <list default="true" id="8c45f52c-7ac9-465a-b093-e24ea59c30ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ItemPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ItemPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/LoginScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -29,6 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -51,6 +72,12 @@
       <workItem from="1608703133615" duration="85000" />
       <workItem from="1608830944480" duration="164000" />
       <workItem from="1608964234563" duration="1396000" />
+      <workItem from="1609271944187" duration="60000" />
+      <workItem from="1609272079919" duration="393000" />
+      <workItem from="1609272521913" duration="55000" />
+      <workItem from="1609311429049" duration="48000" />
+      <workItem from="1609336363766" duration="1878000" />
+      <workItem from="1609338283201" duration="2237000" />
     </task>
     <servers />
   </component>
