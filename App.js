@@ -23,6 +23,8 @@ const categories = [
   { label: 'Clothing', value: 2 },
   { label: 'Books', value: 3 },
   { label: 'Electronics', value: 4 },
+
+  { label: 'Home Products', value: 5 },
 ];
 
 export default function App() {
