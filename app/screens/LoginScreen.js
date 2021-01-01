@@ -20,7 +20,7 @@ const menuItems = [
     icon: { name: 'facebook-with-circle', color: '#4267B2' },
   },
   { title: 'Google', icon: { name: 'google--with-circle', color: '#DB4437' } },
-  { title: 'Twitter', icon: { name: 'twitter-with-circle', color: '#1DA1F2' } },
+  { title: 'Twitter', icon: { name: 'twitter-with-circle', color: '#1da1f2' } },
 ];
 
 const validationSchema = yup.object().shape({
@@ -30,9 +30,7 @@ const validationSchema = yup.object().shape({
 });
 
 function LoginScreen() {
-  state = {
-    checked: false,
-  };
+
   return (
     <Screen style={{ padding: 7 }}>
       <Image source={require('../assets/icon.png')} style={styles.logo} />

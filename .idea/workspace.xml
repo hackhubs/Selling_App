@@ -5,15 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c45f52c-7ac9-465a-b093-e24ea59c30ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/ExpoProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ExpoProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppCheckBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppCheckBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppFormField.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppFormField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppText.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppTextInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppTextInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ErrorMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ErrorMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ItemPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ItemPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ListItemDeleteAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ListItemDeleteAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PickerItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PickerItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Screen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/SubmitButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/SubmitButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/AccountScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/AccountScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/ListingDetailsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/ListingDetailsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/ListingsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/ListingsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/LoginScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/MessagesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/MessagesScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/VeiwImageScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/VeiwImageScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/WelcomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/WelcomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -29,10 +78,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="8c45f52c-7ac9-465a-b093-e24ea59c30ff" name="Default Changelist" comment="" />
@@ -51,10 +104,28 @@
       <workItem from="1608703133615" duration="85000" />
       <workItem from="1608830944480" duration="164000" />
       <workItem from="1608964234563" duration="1396000" />
+      <workItem from="1609271944187" duration="60000" />
+      <workItem from="1609272079919" duration="393000" />
+      <workItem from="1609272521913" duration="55000" />
+      <workItem from="1609311429049" duration="48000" />
+      <workItem from="1609336363766" duration="1878000" />
+      <workItem from="1609338283201" duration="2237000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="57" y="127" width="983" height="853" key="AVDManager" timestamp="1609487377380">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="57" y="127" width="983" height="853" key="AVDManager/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1609487377380" />
+    <state x="100" y="127" width="1720" height="853" key="AVDManager/0.27.3360.1053@0.27.3360.1053" timestamp="1609484251754" />
+    <state x="464" y="188" width="992" height="737" key="SettingsEditor" timestamp="1609487349966">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="464" y="188" key="SettingsEditor/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1609487349965" />
+    <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1609479027002" />
   </component>
 </project>

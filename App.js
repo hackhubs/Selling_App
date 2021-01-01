@@ -16,12 +16,13 @@ import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
 import ItemPicker from './app/components/ItemPicker';
 import LoginScreen from './app/screens/LoginScreen';
+import ListingEditScreen from './app/screens/ListingEditScreen';
 
-const categories = [
-  { label: 'furniture', value: 1 },
-  { label: 'Clothing', value: 2 },
-  { label: 'Books', value: 3 },
-];
+// const categories = [
+//   { label: 'furniture', value: 1 },
+//   { label: 'Clothing', value: 2 },
+//   { label: 'Books', value: 3 },
+// ];
 
 export default function App() {
   const [category, setcategory] = useState();
@@ -36,6 +37,6 @@ export default function App() {
     //   />
     //   <AppTextInput placeholder="email" icon="email-outline" /> */}
     // </Screen>
-    <LoginScreen />
+    <ListingEditScreen />
   );
 }
