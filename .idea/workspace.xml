@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
@@ -40,6 +41,13 @@
       <change beforePath="$PROJECT_DIR$/app/screens/WelcomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/WelcomeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AppPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ItemPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ItemPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/LoginScreen.js" afterDir="false" />
+>>>>>>> 130fa2825e9283b21ec2432d9559631ab30202c5
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

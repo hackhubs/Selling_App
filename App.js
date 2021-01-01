@@ -18,11 +18,14 @@ import ItemPicker from './app/components/ItemPicker';
 import LoginScreen from './app/screens/LoginScreen';
 import ListingEditScreen from './app/screens/ListingEditScreen';
 
-// const categories = [
-//   { label: 'furniture', value: 1 },
-//   { label: 'Clothing', value: 2 },
-//   { label: 'Books', value: 3 },
-// ];
+const categories = [
+  { label: 'furniture', value: 1 },
+  { label: 'Clothing', value: 2 },
+  { label: 'Books', value: 3 },
+  { label: 'Electronics', value: 4 },
+
+  { label: 'Home Products', value: 5 },
+];
 
 export default function App() {
   const [category, setcategory] = useState();
