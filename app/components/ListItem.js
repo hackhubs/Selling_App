@@ -29,9 +29,13 @@ function ListItem({
           {IconComponent}
           {image && <Image style={styles.image} source={image} />}
           <View style={styles.detailsContainer}>
-            <AppText style={[styles.title, style1]}>{title}</AppText>
+            <AppText style={[styles.title, style1]} numberOfLines={3}>
+              {title}
+            </AppText>
             {subtitle && (
-              <AppText style={[styles.subtitle, style1]}>{subtitle}</AppText>
+              <AppText style={[styles.subtitle, style1]} numberOfLines={3}>
+                {subtitle}
+              </AppText>
             )}
           </View>
           <View style={{ position: 'absolute' }}>{IconrightComponent}</View>
