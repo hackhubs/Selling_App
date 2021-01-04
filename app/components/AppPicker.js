@@ -14,7 +14,15 @@ import AppText from './AppText';
 import Screen from './Screen';
 import PickerItem from './PickerItem';
 
-function AppPicker({ icon, items, placeholder, onSelectedItem, selectedItem }) {
+function AppPicker({
+  icon,
+  items,
+  placeholder,
+  numberOfColumns,
+  onSelectedItem,
+  selectedItem,
+  PickerItemComponent = PickerItem,
+}) {
   const [modalVisible, setmodalVisible] = useState(false);
   return (
     <>
@@ -22,22 +30,23 @@ function AppPicker({ icon, items, placeholder, onSelectedItem, selectedItem }) {
         <View style={styles.container}>
           <MaterialCommunityIcons name={icon} size={25} style={styles.icon} />
           {selectedItem ? (
-              <AppText style={styles.text}>{selectedItem.label}</AppText>
+            <AppText style={styles.text}>{selectedItem.label}</AppText>
           ) : (
-              <AppText style={styles.placeholder}>{placeholder}</AppText>
+            <AppText style={styles.placeholder}>{placeholder}</AppText>
           )}
           <MaterialCommunityIcons name="chevron-double-down" size={25} />
         </View>
-
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType="slide">
         <Screen>
           <Button title="close" onPress={() => setmodalVisible(false)} />
           <FlatList
             data={items}
+            numColumns={numberOfColumns}
             keyExtractor={(item) => item.value.toString()}
             renderItem={({ item }) => (
-              <PickerItem
+              <PickerItemComponent
+                item={item}
                 label={item.label}
                 onPress={() => {
                   setmodalVisible(false);
@@ -73,8 +82,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   placeholder: {
-    color: 'black'
-    }
+    color: 'black',
+  },
 });
 
 export default AppPicker;
