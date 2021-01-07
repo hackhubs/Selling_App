@@ -3,7 +3,7 @@ export default {
   secondary: '#4ecdc4',
   black: '#000',
   white: '#ffff',
-  medium: '#6e6969',
+  medium: '#696969',
   light: '#f9f9f9',
   yellow: '#e3e300',
   text: '#fccb45',
