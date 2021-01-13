@@ -45,12 +45,12 @@ const listings = [
 function ListingsScreen(props) {
   return (
     <Screen style={styles.screen}>
-      <View style={{ bottom: 15 }}>
+      {/* <View style={{ bottom: 15 }}>
         <SearchBar
           placeholder="Search"
           onIconPress={() => console.log('press search')}
         />
-      </View>
+      </View> */}
 
       <FlatList
         data={listings}
@@ -61,9 +61,9 @@ function ListingsScreen(props) {
             subtitle={'Rs' + ' ' + item.price + '.00'}
             image={item.image}
             username={'Posted By:' + ' ' + item.username}
-            IconComponent={<Icon name="map-marker-right-outline" size={22} />}
+            IconComponent={<Icon name="map-marker-right-outline" size={18} />}
             location={item.location}
-            details={'View Details ▶'}
+            details={' View Details ▶'}
             onPress={() => console.log('listing Screen', item)}
           />
         )}
@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
   screen: {
     padding: 7,
     backgroundColor: colors.light,
-    marginTop: 5,
-    marginBottom: 15,
+    marginTop: 15,
+    marginBottom: 10,
   },
 });
 

@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 200,
+    height: 210,
   },
   detailContainer: {
     padding: 15,
@@ -70,12 +70,12 @@ const styles = StyleSheet.create({
     bottom: 10,
   },
   user: {
-    fontSize: 13,
+    fontSize: 10,
     top: -3,
   },
 
   userlocation: {
-    fontSize: 13,
+    fontSize: 10,
   },
 
   details: {

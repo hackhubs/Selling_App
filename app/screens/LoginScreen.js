@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, FlatList } from 'react-native';
+import { View, StyleSheet, Image, FlatList, ScrollView } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import * as yup from 'yup';
 
@@ -29,89 +29,90 @@ const validationSchema = yup.object().shape({
   check: yup.bool().oneOf([true], 'Accept Terms & Conditions is required'),
 });
 
-function LoginScreen() {
-
+function LoginScreen({}) {
   return (
-    <Screen style={{ padding: 7 }}>
-      <Image source={require('../assets/icon.png')} style={styles.logo} />
-      <AppForm
-        initialValues={{ email: '', password: '', check: false }}
-        onSubmit={(values) => console.log(values)}
-        validationSchema={validationSchema}
-      >
-        <AppFormField
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="Email"
-          icon="email-outline"
-          textContentType="emailAddress"
-          keyboardType="email-address"
-          name="email"
-        />
-        <AppFormField
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="Password"
-          icon="account-lock-outline"
-          secureTextEntry
-          textContentType="password"
-          name="password"
-        />
-
-        <AppCheckBox
-          checkedIcon="check-box"
-          iconType="material"
-          uncheckedIcon="check-box-outline-blank"
-          title="Agree to terms and conditions"
-          checkedTitle="You agreed to our terms and conditions"
-          name="check"
-        />
-
-        <View style={styles.button}>
-          <SubmitButton title="Login" />
-          <ListItem
-            title="Forget Password "
-            onPress={() => console.log('Forget Password')}
+    <ScrollView>
+      <Screen style={{ padding: 7 }}>
+        <Image source={require('../assets/icon.png')} style={styles.logo} />
+        <AppForm
+          initialValues={{ email: '', password: '', check: false }}
+          onSubmit={(values) => console.log(values)}
+          validationSchema={validationSchema}
+        >
+          <AppFormField
+            autoCapitalize="none"
+            autoCorrect={false}
+            placeholder="Email"
+            icon="email-outline"
+            textContentType="emailAddress"
+            keyboardType="email-address"
+            name="email"
           />
-          <AppText
-            style={{
-              fontSize: 22,
-              top: 12,
-            }}
-          >
-            Sign in with
-          </AppText>
-        </View>
-      </AppForm>
+          <AppFormField
+            autoCapitalize="none"
+            autoCorrect={false}
+            placeholder="Password"
+            icon="account-lock-outline"
+            secureTextEntry
+            textContentType="password"
+            name="password"
+          />
 
-      <View style={{ alignItems: 'center', marginTop: 40 }}>
-        <FlatList
-          data={menuItems}
-          horizontal={true}
-          keyExtractor={(item) => item.title}
-          renderItem={({ item }) => (
+          <AppCheckBox
+            checkedIcon="check-box"
+            iconType="material"
+            uncheckedIcon="check-box-outline-blank"
+            title="Agree to terms and conditions"
+            checkedTitle="You agreed to our terms and conditions"
+            name="check"
+          />
+
+          <View style={styles.button}>
+            <SubmitButton title="Login" />
             <ListItem
-              onPress={() => console.log('sign in')}
-              IconComponent={
-                <Entypo
-                  name={item.icon.name}
-                  size={53}
-                  color={item.icon.color}
-                />
-              }
+              title="Forget Password "
+              onPress={() => console.log('Forget Password')}
             />
-          )}
-        />
-        <View style={{ flexDirection: 'row' }}>
-          <AppText>Don't have an account ?</AppText>
-          <ListItem
-            title="Sign Up"
-            style1={{ color: colors.subtitle, fontSize: 20, marginTop: -12 }}
-            onPress={() => console.log('Sign up')}
+            <AppText
+              style={{
+                fontSize: 22,
+                top: 12,
+              }}
+            >
+              Sign in with
+            </AppText>
+          </View>
+        </AppForm>
+
+        <View style={{ alignItems: 'center', marginTop: 40 }}>
+          <FlatList
+            data={menuItems}
+            horizontal={true}
+            keyExtractor={(item) => item.title}
+            renderItem={({ item }) => (
+              <ListItem
+                onPress={() => console.log('sign in')}
+                IconComponent={
+                  <Entypo
+                    name={item.icon.name}
+                    size={53}
+                    color={item.icon.color}
+                  />
+                }
+              />
+            )}
           />
+          <View style={{ flexDirection: 'row' }}>
+            <AppText>Don't have an account ?</AppText>
+            <ListItem
+              title="Sign Up"
+              style1={{ color: colors.subtitle, fontSize: 20, marginTop: -12 }}
+              onPress={() => console.log('Sign up')}
+            />
+          </View>
         </View>
-      </View>
-    </Screen>
+      </Screen>
+    </ScrollView>
   );
 }
 
@@ -120,7 +121,6 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     alignSelf: 'center',
-    marginTop: 35,
     bottom: 20,
   },
   container: {

@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textInput: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '600',
   },
   icon: {

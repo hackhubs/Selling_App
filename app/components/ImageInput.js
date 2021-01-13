@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   StyleSheet,
@@ -56,10 +56,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 15,
     backgroundColor: '#f9f9f9',
-    height: 120,
+    height: 180,
     justifyContent: 'center',
     overflow: 'hidden',
-    width: 120,
+    width: 180,
   },
   Image: {
     height: '100%',
