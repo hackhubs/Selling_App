@@ -4,8 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from '../components/Icon';
 import AccountScreen from '../screens/AccountScreen';
 import ListingEditScreen from '../screens/ListingEditScreen';
-import ListingsScreen from '../screens/ListingsScreen';
 import MessagesScreen from '../screens/MessagesScreen';
+import FeedNavigator from './FeedNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +20,7 @@ const AppNavigator = () => (
   >
     <Tab.Screen
       name="Home"
-      component={ListingsScreen}
+      component={FeedNavigator}
       options={{
         tabBarIcon: ({ size, color }) => (
           <Icon name="home-variant-outline" size={size} color={color} />
@@ -32,7 +32,7 @@ const AppNavigator = () => (
       component={ListingEditScreen}
       options={{
         tabBarIcon: ({ size, color }) => (
-          <Icon name="account-edit-outline" size={size} color={color} />
+          <Icon name="plus-circle-outline" size={size} color={color} />
         ),
       }}
     />

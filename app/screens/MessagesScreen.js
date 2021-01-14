@@ -51,12 +51,12 @@ function MessagesScreen() {
   };
   return (
     <Screen>
-      <View style={{ top: 2 }}>
+      {/* <View style={{ top: 2 }}>
         <SearchBar
           placeholder="Search"
           onIconPress={() => console.log('press search')}
         />
-      </View>
+      </View> */}
       <View style={{ top: 23 }}>
         <FlatList
           data={messages}

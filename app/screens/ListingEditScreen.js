@@ -23,8 +23,8 @@ const validationSchema = Yup.object().shape({
 
 const categories = [
   {
-    icon: 'floor-lamp',
-    label: 'Furniture',
+    icon: 'lamp',
+    label: 'Lamps ',
     value: 1,
   },
   {
@@ -34,7 +34,7 @@ const categories = [
   },
   {
     icon: 'camera',
-    label: 'Cameras',
+    label: 'Camera',
     value: 3,
   },
   {
@@ -44,7 +44,7 @@ const categories = [
   },
   {
     icon: 'shoe-heel',
-    label: 'Clothing',
+    label: 'Foot Wear',
     value: 5,
   },
   {

@@ -42,7 +42,7 @@ const listings = [
   },
 ];
 
-function ListingsScreen(props) {
+function ListingsScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
       {/* <View style={{ bottom: 15 }}>
@@ -64,7 +64,7 @@ function ListingsScreen(props) {
             IconComponent={<Icon name="map-marker-right-outline" size={18} />}
             location={item.location}
             details={' View Details ▶'}
-            onPress={() => console.log('listing Screen', item)}
+            onPress={() => navigation.navigate('Details', item)}
           />
         )}
       />

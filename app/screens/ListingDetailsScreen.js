@@ -4,19 +4,28 @@ import { Image, View, StyleSheet } from 'react-native';
 import colors from '../config/colors';
 import AppText from '../components/AppText';
 import ListItem from '../components/ListItem';
+import Icon from '../components/Icon';
 
-function ListingDetailsScreen() {
+function ListingDetailsScreen({ route }) {
+  const listening = route.params;
   return (
-    <View>
-      <Image style={styles.image} source={require('../assets/jacket.jpg')} />
+    <View style={{ backgroundColor: 'white', flex: 1 }}>
+      <Image style={styles.image} source={listening.image} />
       <View style={styles.detailContainer}>
-        <AppText style={styles.title}>Red jacket for sale</AppText>
-        <AppText style={styles.price}>$ 100</AppText>
+        <AppText style={styles.title}>{listening.title}</AppText>
+        <AppText style={styles.price}>$ {listening.price}</AppText>
         <ListItem
           style={{ right: 12 }}
           image={require('../assets/mosh.jpg')}
           title="Mosh hamdeni"
           subtitle="5 Listings"
+          IconrightComponent={
+            <Icon
+              name="chevron-right"
+              size={30}
+              style={{ left: 350, top: 35 }}
+            />
+          }
         />
       </View>
     </View>
