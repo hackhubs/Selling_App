@@ -13,7 +13,7 @@ function ListingDetailsScreen({ route }) {
       <Image style={styles.image} source={listening.image} />
       <View style={styles.detailContainer}>
         <AppText style={styles.title}>{listening.title}</AppText>
-        <AppText style={styles.price}>$ {listening.price}</AppText>
+        <AppText style={styles.price}>INR {listening.price}</AppText>
         <ListItem
           style={{ right: 12 }}
           image={require('../assets/mosh.jpg')}

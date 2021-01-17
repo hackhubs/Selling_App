@@ -58,7 +58,7 @@ function ListingsScreen({ navigation }) {
         renderItem={({ item }) => (
           <Card
             title={item.title}
-            subtitle={'Rs' + ' ' + item.price + '.00'}
+            subtitle={'INR' + ' ' + item.price + '.00'}
             image={item.image}
             username={'Posted By:' + ' ' + item.username}
             IconComponent={<Icon name="map-marker-right-outline" size={18} />}
