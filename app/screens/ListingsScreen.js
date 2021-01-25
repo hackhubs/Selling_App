@@ -1,48 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 
 import Screen from '../components/Screen';
 import Card from '../components/Card';
 import colors from '../config/colors';
+import listingsApi from '../api/listings';
 import Icon from '../components/Icon';
-
-const listings = [
-  {
-    id: 1,
-    title: 'Red jacket for sale',
-    price: 100,
-    username: 'Abhav Thakur',
-    image: require('../assets/jacket.jpg'),
-    location: 'Himchal Pradesh, India',
-  },
-  {
-    id: 2,
-    title: 'Couch in great condition',
-    price: 1000,
-    username: 'Aanya Jain',
-    image: require('../assets/couch.jpg'),
-    location: 'Haryana, India',
-  },
-  {
-    id: 3,
-    title: 'H.P Laptop',
-    price: 21000,
-    username: 'Abhav Thakur',
-    image: require('../assets/laptop.jpeg'),
-    location: 'Himchal Pradesh, India',
-  },
-  {
-    id: 4,
-    title: 'RD Sharma Maths book',
-    price: 500,
-    username: 'Aanya Jain',
-    image: require('../assets/book.jpeg'),
-    location: 'Haryana, India',
-  },
-];
+import AppText from '../components/AppText';
+import AppButton from '../components/AppButton';
+import AppActivityIndicator from '../components/AppActivityIndicator';
 
 function ListingsScreen({ navigation }) {
+  const [listings, setlistings] = useState([]);
+  const [error, seterror] = useState(false);
+  const [loading, setloading] = useState(false);
+
+  useEffect(() => {
+    loadlistings();
+  }, []);
+
+  const loadlistings = async () => {
+    setloading(true);
+    const response = await listingsApi.getListings();
+    setloading(false);
+
+    if (!response.ok) return seterror(true);
+    seterror(false);
+    setlistings(response.data);
+  };
   return (
     <Screen style={styles.screen}>
       {/* <View style={{ bottom: 15 }}>
@@ -52,6 +38,13 @@ function ListingsScreen({ navigation }) {
         />
       </View> */}
 
+      {error && (
+        <>
+          <AppText>Couldn't retrive the listings. </AppText>
+          <AppButton title="Retry" onPress={loadlistings} />
+        </>
+      )}
+      <AppActivityIndicator visible={loading} />
       <FlatList
         data={listings}
         keyExtractor={(listing) => listing.id.toString()}
@@ -59,12 +52,12 @@ function ListingsScreen({ navigation }) {
           <Card
             title={item.title}
             subtitle={'INR' + ' ' + item.price + '.00'}
-            image={item.image}
+            imageUrl={item.images[0].url}
             username={'Posted By:' + ' ' + item.username}
             IconComponent={<Icon name="map-marker-right-outline" size={18} />}
             location={item.location}
             details={' View Details ▶'}
-            onPress={() => navigation.navigate('Details', item)}
+            onPress={() => navigation.navigate('Details', item)} //Details in routes
           />
         )}
       />
@@ -76,8 +69,8 @@ const styles = StyleSheet.create({
   screen: {
     padding: 7,
     backgroundColor: colors.light,
-    marginTop: 15,
-    marginBottom: 10,
+    // marginTop: 15,
+    // marginBottom: 10,
   },
 });
 

@@ -13,7 +13,7 @@ import AppText from '../components/AppText';
 function Card({
   title,
   subtitle,
-  image,
+  imageUrl,
   username,
   location,
   details,
@@ -27,7 +27,7 @@ function Card({
       onPress={onPress}
     >
       <View style={styles.card}>
-        <Image style={styles.image} source={image} />
+        <Image style={styles.image} source={{ uri: imageUrl }} />
 
         <View style={styles.detailContainer}>
           <AppText style={styles.title}>{title}</AppText>
