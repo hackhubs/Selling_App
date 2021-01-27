@@ -10,25 +10,17 @@ import Icon from '../components/Icon';
 import AppText from '../components/AppText';
 import AppButton from '../components/AppButton';
 import AppActivityIndicator from '../components/AppActivityIndicator';
+import useApi from '../hooks/useApi';
 
 function ListingsScreen({ navigation }) {
-  const [listings, setlistings] = useState([]);
-  const [error, seterror] = useState(false);
-  const [loading, setloading] = useState(false);
+  const { listings, error, loading, request: loadlistings } = useApi(
+    listingsApi.getListings
+  );
 
   useEffect(() => {
     loadlistings();
   }, []);
 
-  const loadlistings = async () => {
-    setloading(true);
-    const response = await listingsApi.getListings();
-    setloading(false);
-
-    if (!response.ok) return seterror(true);
-    seterror(false);
-    setlistings(response.data);
-  };
   return (
     <Screen style={styles.screen}>
       {/* <View style={{ bottom: 15 }}>
