@@ -49,7 +49,7 @@ function ListingsScreen({ navigation }) {
             IconComponent={<Icon name="map-marker-right-outline" size={18} />}
             location={item.location}
             details={' View Details ▶'}
-            onPress={() => navigation.navigate('Details', item)} //Details in routes
+            onPress={() => navigation.navigate('Details', item)} // Details in routes
           />
         )}
       />
