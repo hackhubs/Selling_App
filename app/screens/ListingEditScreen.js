@@ -1,71 +1,71 @@
-import React, { useEffect, useState } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import * as Yup from 'yup';
+import React, { useEffect, useState } from "react";
+import { ScrollView, StyleSheet } from "react-native";
+import * as Yup from "yup";
 
-import Screen from '../components/Screen';
+import Screen from "../components/Screen";
 import {
   AppForm as Form,
   AppFormField as FormField,
   AppFormPicker as Picker,
   SubmitButton,
-} from '../components/form';
-import CategoryPickerItem from '../components/CategoryPickerItem';
-import AppFormImagePicker from '../components/AppFormImagePicker';
-import useLocation from '../hooks/useLocation';
-import listingsApi from '../api/listings';
+} from "../components/form";
+import CategoryPickerItem from "../components/CategoryPickerItem";
+import AppFormImagePicker from "../components/AppFormImagePicker";
+import useLocation from "../hooks/useLocation";
+import listingsApi from "../api/listings";
 
 const validationSchema = Yup.object().shape({
-  title: Yup.string().required().min(1).label('Title'),
-  price: Yup.number().required().min(1).max(10000).label('Price'),
-  description: Yup.string().required().label('Description'),
-  category: Yup.object().required().nullable().label('Category'),
-  images: Yup.array().min(1, 'Please select at least one image.'),
+  title: Yup.string().required().min(1).label("Title"),
+  price: Yup.number().required().min(1).max(10000).label("Price"),
+  description: Yup.string().required().label("Description"),
+  category: Yup.object().required().nullable().label("Category"),
+  images: Yup.array().min(1, "Please select at least one image."),
 });
 
 const categories = [
   {
-    icon: 'lamp',
-    label: 'Lamps ',
+    icon: "lamp",
+    label: "Lamps ",
     value: 1,
   },
   {
-    icon: 'car',
-    label: 'Cars',
+    icon: "car",
+    label: "Cars",
     value: 2,
   },
   {
-    icon: 'camera',
-    label: 'Camera',
+    icon: "camera",
+    label: "Camera",
     value: 3,
   },
   {
-    icon: 'cards',
-    label: 'Games',
+    icon: "cards",
+    label: "Games",
     value: 4,
   },
   {
-    icon: 'shoe-heel',
-    label: 'Foot Wear',
+    icon: "shoe-heel",
+    label: "Foot Wear",
     value: 5,
   },
   {
-    icon: 'basketball',
-    label: 'Sports',
+    icon: "basketball",
+    label: "Sports",
     value: 6,
   },
   {
-    icon: 'headphones',
-    label: 'Movies & Music',
+    icon: "headphones",
+    label: "Movies & Music",
     value: 7,
   },
   {
-    icon: 'book-open-variant',
-    label: 'Books',
+    icon: "book-open-variant",
+    label: "Books",
     value: 8,
   },
   {
-    icon: 'application',
-    label: 'Other',
+    icon: "application",
+    label: "Other",
     value: 9,
   },
 ];
@@ -74,9 +74,12 @@ function ListingEditScreen() {
   const location = useLocation();
 
   const handleSubmit = async (listing) => {
-    const result = await listingsApi.addListings({ ...listing, location });
-    if (!result.ok) return alert('Could not save  the listings.');
-    alert('Success');
+    const result = await listingsApi.addListings(
+      { ...listing, location },
+      (progress) => console.log(progress)
+    );
+    if (!result.ok) return alert("Could not save  the listings.");
+    alert("Success");
   };
 
   return (
@@ -84,9 +87,9 @@ function ListingEditScreen() {
       <Screen style={{ padding: 5 }}>
         <Form
           initialValues={{
-            title: '',
-            price: '',
-            description: '',
+            title: "",
+            price: "",
+            description: "",
             category: null,
             images: [],
           }}
