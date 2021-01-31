@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
-import { SearchBar } from 'react-native-elements';
+import React, { useState, useEffect } from "react";
+import { FlatList, StyleSheet, View } from "react-native";
+import { SearchBar } from "react-native-elements";
 
-import Screen from '../components/Screen';
-import Card from '../components/Card';
-import colors from '../config/colors';
-import listingsApi from '../api/listings';
-import Icon from '../components/Icon';
-import AppText from '../components/AppText';
-import AppButton from '../components/AppButton';
-import AppActivityIndicator from '../components/AppActivityIndicator';
-import useApi from '../hooks/useApi';
+import Screen from "../components/Screen";
+import Card from "../components/Card";
+import colors from "../config/colors";
+import listingsApi from "../api/listings";
+import Icon from "../components/Icon";
+import AppText from "../components/AppText";
+import AppButton from "../components/AppButton";
+import AppActivityIndicator from "../components/AppActivityIndicator";
+import useApi from "../hooks/useApi";
 
 function ListingsScreen({ navigation }) {
   const { listings, error, loading, request: loadlistings } = useApi(
@@ -43,13 +43,13 @@ function ListingsScreen({ navigation }) {
         renderItem={({ item }) => (
           <Card
             title={item.title}
-            subtitle={'INR' + ' ' + item.price + '.00'}
+            subtitle={"INR" + " " + item.price + ".00"}
             imageUrl={item.images[0].url}
-            username={'Posted By:' + ' ' + item.username}
+            username={"Posted By:" + " " + item.username}
             IconComponent={<Icon name="map-marker-right-outline" size={18} />}
-            location={item.location}
-            details={' View Details ▶'}
-            onPress={() => navigation.navigate('Details', item)} // Details in routes
+            // location={item.location}
+            details={" View Details ▶"}
+            onPress={() => navigation.navigate("Details", item)} // Details in routes
           />
         )}
       />
