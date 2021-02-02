@@ -50,6 +50,7 @@ function ListingsScreen({ navigation }) {
             // location={item.location}
             details={" View Details ▶"}
             onPress={() => navigation.navigate("Details", item)} // Details in routes
+            thumbnailUrl={item.images[0].thumbnailUrl}
           />
         )}
       />

@@ -1,14 +1,9 @@
-import React from 'react';
-import {
-  View,
-  StyleSheet,
-  Image,
-  Text,
-  TouchableHighlight,
-} from 'react-native';
+import React from "react";
+import { View, StyleSheet, Text, TouchableHighlight } from "react-native";
+import { Image } from "react-native-expo-image-cache";
 
-import colors from '../config/colors';
-import AppText from '../components/AppText';
+import colors from "../config/colors";
+import AppText from "../components/AppText";
 
 function Card({
   title,
@@ -19,6 +14,7 @@ function Card({
   details,
   onPress,
   IconComponent,
+  thumbnailUrl,
 }) {
   return (
     <TouchableHighlight
@@ -27,7 +23,12 @@ function Card({
       onPress={onPress}
     >
       <View style={styles.card}>
-        <Image style={styles.image} source={{ uri: imageUrl }} />
+        <Image
+          style={styles.image}
+          tint="light"
+          preview={{ uri: thumbnailUrl }}
+          uri={imageUrl}
+        />
 
         <View style={styles.detailContainer}>
           <AppText style={styles.title}>{title}</AppText>
@@ -36,7 +37,7 @@ function Card({
           <Text style={styles.details}>{details}</Text>
 
           <AppText style={styles.user}>{username}</AppText>
-          <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: "row" }}>
             {IconComponent}
             <AppText style={styles.userlocation}>{location}</AppText>
           </View>
@@ -51,10 +52,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     backgroundColor: colors.white,
     marginBottom: 15,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
   image: {
-    width: '100%',
+    width: "100%",
     height: 210,
   },
   detailContainer: {
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     color: colors.subtitle,
-    fontWeight: '600',
+    fontWeight: "600",
     top: 18,
   },
   title: {
@@ -79,15 +80,15 @@ const styles = StyleSheet.create({
   },
 
   details: {
-    backgroundColor: '#2730ff',
+    backgroundColor: "#2730ff",
     borderRadius: 60,
     left: 225,
     width: 110,
     top: 30,
     padding: 5,
-    color: 'white',
-    justifyContent: 'center',
-    alignItems: 'center',
+    color: "white",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

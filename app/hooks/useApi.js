@@ -10,6 +10,7 @@ export default useApi = (apiFunc) => {
     const response = await apiFunc(...args);
     setloading(false);
     if (!response.ok) return seterror(true);
+
     seterror(false);
 
     setlistings(response.data);
