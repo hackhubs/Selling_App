@@ -9,7 +9,6 @@ function AppFormField({ name, ...otherProps }) {
     setFieldTouched,
     setFieldValue,
     values,
-    handleChange,
     errors,
     touched,
   } = useFormikContext();

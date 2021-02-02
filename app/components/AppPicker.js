@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   View,
   StyleSheet,
@@ -6,13 +6,13 @@ import {
   Modal,
   Button,
   FlatList,
-} from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+} from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import colors from '../config/colors';
-import AppText from './AppText';
-import Screen from './Screen';
-import PickerItem from './PickerItem';
+import colors from "../config/colors";
+import AppText from "./AppText";
+import Screen from "./Screen";
+import PickerItem from "./PickerItem";
 
 function AppPicker({
   icon,
@@ -64,16 +64,16 @@ function AppPicker({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.light,
-    flexDirection: 'row',
-    width: '100%',
+    flexDirection: "row",
+    width: "100%",
     borderRadius: 20,
     padding: 12,
     marginVertical: 10,
-    alignItems: 'center',
+    alignItems: "center",
   },
   textInput: {
     fontSize: 18,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   icon: {
     marginRight: 10,
@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   placeholder: {
-    color: 'black',
+    color: "black",
+    flex: 0.5,
   },
 });
 
