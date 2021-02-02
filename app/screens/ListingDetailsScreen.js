@@ -1,22 +1,22 @@
-import React from 'react';
-import { Image, View, StyleSheet } from 'react-native';
+import React from "react";
+import { Image, View, StyleSheet } from "react-native";
 
-import colors from '../config/colors';
-import AppText from '../components/AppText';
-import ListItem from '../components/ListItem';
-import Icon from '../components/Icon';
+import colors from "../config/colors";
+import AppText from "../components/AppText";
+import ListItem from "../components/ListItem";
+import Icon from "../components/Icon";
 
 function ListingDetailsScreen({ route }) {
   const listening = route.params;
   return (
-    <View style={{ backgroundColor: 'white', flex: 1 }}>
-      <Image style={styles.image} source={listening.image} />
+    <View style={{ backgroundColor: "white", flex: 1 }}>
+      <Image style={styles.image} source={listening.images[0].url} />
       <View style={styles.detailContainer}>
         <AppText style={styles.title}>{listening.title}</AppText>
         <AppText style={styles.price}>INR {listening.price}</AppText>
         <ListItem
           style={{ right: 12 }}
-          image={require('../assets/mosh.jpg')}
+          image={require("../assets/mosh.jpg")}
           title="Mosh hamdeni"
           subtitle="5 Listings"
           IconrightComponent={
@@ -34,7 +34,7 @@ function ListingDetailsScreen({ route }) {
 
 const styles = StyleSheet.create({
   image: {
-    width: '100%',
+    width: "100%",
     height: 300,
   },
   detailContainer: {
@@ -42,11 +42,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   price: {
     color: colors.secondary,
-    fontWeight: '600',
+    fontWeight: "600",
     fontSize: 22,
     marginVertical: 10,
   },

@@ -1,24 +1,23 @@
-import React from 'react';
-import { StyleSheet, View, FlatList, Image } from 'react-native';
-import { Ionicons, Feather } from '@expo/vector-icons';
+import React from "react";
+import { StyleSheet, View, FlatList, Image, Button } from "react-native";
+import { Ionicons, Feather } from "@expo/vector-icons";
 
-import Icon from '../components/Icon';
-import ListItem from '../components/ListItem';
-import Screen from '../components/Screen';
-import colors from '../config/colors';
+import Icon from "../components/Icon";
+import ListItem from "../components/ListItem";
+import Screen from "../components/Screen";
 
 const menuItems = [
   {
-    title: 'My Purchase',
+    title: "My Purchase",
     icon: {
-      name: 'shopping-bag',
+      name: "shopping-bag",
     },
   },
 ];
 
 function AccountScreen() {
   return (
-    <Screen style={{ backgroundColor: '#f3f6f3' }}>
+    <Screen style={{ backgroundColor: "#f3f6f3" }}>
       <View style={styles.container}>
         <Image
           style={{
@@ -26,14 +25,16 @@ function AccountScreen() {
             height: 250,
             borderRadius: 115,
           }}
-          source={require('../assets/aanya.png')}
+          source={require("../assets/aanya.png")}
         />
       </View>
       <View style={styles.details}>
         <ListItem
           title="Edit Profile"
           style1={{ fontSize: 16 }}
+          style={{ paddingHorizontal: 108 }}
           IconComponent={<Icon name="account-edit" size={30} />}
+          onPress={() => console.log("Edit Profile")}
         />
       </View>
 
@@ -77,8 +78,12 @@ function AccountScreen() {
         <ListItem
           title="Log Out"
           style1={{ fontSize: 16 }}
+          style={{ paddingHorizontal: 120 }}
           IconComponent={<Icon name="logout" size={30} />}
+          onPress={() => console.log("Log out")}
         />
+        {/* <Icon name="logout" size={30} />
+        <Button title="Log out" onPress={() => console.log("Log out")} /> */}
       </View>
     </Screen>
   );
@@ -86,15 +91,15 @@ function AccountScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 8,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 7,
   },
   details: {
-    backgroundColor: 'white',
-    width: 350,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "white",
+    width: 340,
+
+    alignItems: "center",
     borderRadius: 40,
     left: 15,
   },

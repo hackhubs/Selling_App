@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default useApi = (apiFunc) => {
   const [listings, setlistings] = useState([]);
@@ -9,9 +9,9 @@ export default useApi = (apiFunc) => {
     setloading(true);
     const response = await apiFunc(...args);
     setloading(false);
-
     if (!response.ok) return seterror(true);
     seterror(false);
+
     setlistings(response.data);
   };
   return { listings, error, loading, request };

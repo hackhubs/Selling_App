@@ -13,7 +13,7 @@ function UploadScreen({ onDone, progress = 0, visible = false }) {
           <Progress.Bar
             color={colors.primary}
             progress={progress}
-            width={200}
+            width={250}
           />
         ) : (
           <LottieView

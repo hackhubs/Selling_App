@@ -100,7 +100,7 @@ function RegisterScreen({ navigation }) {
         <View style={{ flexDirection: "row" }}>
           <AppText>Already have an account ?</AppText>
           <ListItem
-            title="Sign Up"
+            title="Sign In"
             style1={{ color: colors.subtitle, fontSize: 20, marginTop: -12 }}
             onPress={() => navigation.navigate("Login")}
           />
