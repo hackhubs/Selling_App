@@ -1,40 +1,43 @@
-import React from 'react';
-import { StyleSheet, Image, ScrollView } from 'react-native';
-import * as yup from 'yup';
+import React from "react";
+import { StyleSheet, Image, ScrollView, View } from "react-native";
+import * as yup from "yup";
 
-import Screen from '../components/Screen';
+import Screen from "../components/Screen";
 import {
   AppForm,
   AppFormField,
   SubmitButton,
   AppCheckBox,
-} from '../components/form';
+} from "../components/form";
+import AppText from "../components/AppText";
+import ListItem from "../components/ListItem";
+import colors from "../config/colors";
 
 const validationSchema = yup.object().shape({
-  name: yup.string().required().label('Name'),
-  email: yup.string().required().email().label('Email'),
-  phone: yup.string().required().label('Phone'),
-  password: yup.string().required().min(4).label('Password'),
+  name: yup.string().required().label("Name"),
+  email: yup.string().required().email().label("Email"),
+  phone: yup.string().required().label("Phone"),
+  password: yup.string().required().min(4).label("Password"),
   confirmPassword: yup
     .string()
-    .oneOf([yup.ref('password')], 'Confirm Password must match the Password')
-    .required('Confirm Password is required'),
-  check: yup.bool().oneOf([true], 'Accept Terms & Conditions is required'),
+    .oneOf([yup.ref("password")], "Confirm Password must match the Password")
+    .required("Confirm Password is required"),
+  check: yup.bool().oneOf([true], "Accept Terms & Conditions is required"),
 });
 
-function RegisterScreen() {
+function RegisterScreen({ navigation }) {
   return (
     <ScrollView>
       <Screen style={{ padding: 7 }}>
-        <Image source={require('../assets/icon.png')} style={styles.logo} />
+        <Image source={require("../assets/icon.png")} style={styles.logo} />
         <AppForm
           initialValues={{
-            email: '',
-            password: '',
-            confirmPassword: '',
+            email: "",
+            password: "",
+            confirmPassword: "",
             check: false,
-            name: '',
-            phone: '',
+            name: "",
+            phone: "",
           }}
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
@@ -77,7 +80,7 @@ function RegisterScreen() {
           <AppFormField
             autoCapitalize="none"
             autoCorrect={false}
-            placeholder="Password"
+            placeholder="Confirm Password"
             icon="account-check-outline"
             secureTextEntry
             textContentType="password"
@@ -94,6 +97,14 @@ function RegisterScreen() {
           />
           <SubmitButton title="Register" />
         </AppForm>
+        <View style={{ flexDirection: "row" }}>
+          <AppText>Already have an account ?</AppText>
+          <ListItem
+            title="Sign Up"
+            style1={{ color: colors.subtitle, fontSize: 20, marginTop: -12 }}
+            onPress={() => navigation.navigate("Login")}
+          />
+        </View>
       </Screen>
     </ScrollView>
   );
@@ -103,16 +114,16 @@ const styles = StyleSheet.create({
   logo: {
     width: 60,
     height: 60,
-    alignSelf: 'center',
+    alignSelf: "center",
     bottom: 20,
   },
   container: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   button: {
     marginTop: 18,
-    alignItems: 'center',
+    alignItems: "center",
   },
 });
 
