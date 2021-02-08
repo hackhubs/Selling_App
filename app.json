@@ -28,7 +28,7 @@
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
-    "description": "This app is for selling second hand items  and get some new items.Now user can login",
+    "description": "This app is for selling second hand items  and get some new items. The app is in development phase you can check UI and tell any changes.",
     "githubUrl": "https://github.com/hackhubs/Selling_App"
   }
 }

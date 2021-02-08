@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
-import { SearchBar } from 'react-native-elements';
-import { Feather } from '@expo/vector-icons';
+import React, { useState } from "react";
+import { FlatList, StyleSheet, Text, View } from "react-native";
+import { SearchBar } from "react-native-elements";
+import { Feather } from "@expo/vector-icons";
 
-import Screen from '../components/Screen';
-import ListItem from '../components/ListItem';
-import ListItemDeleteAction from '../components/ListItemDeleteAction';
-import Icon from '../components/Icon';
+import Screen from "../components/Screen";
+import ListItem from "../components/ListItem";
+import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import Icon from "../components/Icon";
 
 const initialMessages = [
   {
     id: 1,
-    title: 'Aanya Jain',
-    description: 'D1',
-    image: require('../assets/aanya.png'),
+    title: "Aanya Jain",
+    description: "D1",
+    image: require("../assets/aanya.png"),
   },
 
   {
     id: 2,
-    title: 'Aanya Jain',
-    description: 'D2',
-    image: require('../assets/aanya.png'),
+    title: "Aanya Jain",
+    description: "D2",
+    image: require("../assets/aanya.png"),
   },
   {
     id: 3,
-    title: 'Aanya Jain',
-    description: 'D3',
-    image: require('../assets/aanya.png'),
+    title: "Aanya Jain",
+    description: "D3",
+    image: require("../assets/aanya.png"),
   },
   {
     id: 4,
-    title: 'Aanya Jain',
-    description: 'D5',
-    image: require('../assets/aanya.png'),
+    title: "Aanya Jain",
+    description: "D5",
+    image: require("../assets/aanya.png"),
   },
   {
     id: 5,
-    title: 'T5',
-    description: 'D6',
-    image: require('../assets/mosh.jpg'),
+    title: "T5",
+    description: "D6",
+    image: require("../assets/mosh.jpg"),
   },
 ];
 
@@ -57,7 +57,8 @@ function MessagesScreen() {
           onIconPress={() => console.log('press search')}
         />
       </View> */}
-      <View style={{ top: 23 }}>
+      <Text style={styles.tite}>Chats</Text>
+      <View style={{ top: 2 }}>
         <FlatList
           data={messages}
           keyExtractor={(message) => message.id.toString()}
@@ -67,17 +68,17 @@ function MessagesScreen() {
               subtitle={item.description}
               image={item.image}
               style={{
-                backgroundColor: 'white',
+                backgroundColor: "white",
                 borderRadius: 8,
                 width: 385,
                 marginBottom: 10,
               }}
-              onPress={() => console.log('message selected', item)}
+              onPress={() => console.log("message selected", item)}
               renderRightActions={() => (
                 <ListItemDeleteAction onPress={() => handleDelete(item)} />
               )}
               renderLeftActions={() => (
-                <View style={{ backgroundColor: 'green', width: 70 }} />
+                <View style={{ backgroundColor: "green", width: 70 }} />
               )}
               IconrightComponent={[
                 <Icon
@@ -109,15 +110,15 @@ function MessagesScreen() {
             setMessages([
               {
                 id: 4,
-                title: 'T4',
-                description: 'D5',
-                image: require('../assets/mosh.jpg'),
+                title: "T4",
+                description: "D5",
+                image: require("../assets/mosh.jpg"),
               },
               {
                 id: 5,
-                title: 'T5',
-                description: 'D5',
-                image: require('../assets/mosh.jpg'),
+                title: "T5",
+                description: "D5",
+                image: require("../assets/mosh.jpg"),
               },
             ]);
           }}
@@ -126,5 +127,15 @@ function MessagesScreen() {
     </Screen>
   );
 }
+
+const styles = StyleSheet.create({
+  tite: {
+    backgroundColor: "white",
+    fontSize: 25,
+    borderBottomRightRadius: 20,
+    padding: 5,
+    paddingLeft: 15,
+  },
+});
 
 export default MessagesScreen;

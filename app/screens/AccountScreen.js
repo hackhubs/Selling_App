@@ -15,7 +15,7 @@ const menuItems = [
   },
 ];
 
-function AccountScreen() {
+function AccountScreen({ navigation }) {
   return (
     <Screen style={{ backgroundColor: "#f3f6f3" }}>
       <View style={styles.container}>
@@ -34,7 +34,7 @@ function AccountScreen() {
           style1={{ fontSize: 16 }}
           style={{ paddingHorizontal: 108 }}
           IconComponent={<Icon name="account-edit" size={30} />}
-          onPress={() => console.log("Edit Profile")}
+          onPress={() => navigation.navigate("Edit")}
         />
       </View>
 
