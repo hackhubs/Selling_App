@@ -2,7 +2,7 @@ import { create } from "apisauce";
 import cache from "../utility/cache";
 
 const apiClient = create({
-  baseURL: "http://192.168.1.103:9000/api",
+  baseURL: "https://sellfy.herokuapp.com/api",
 });
 
 const get = apiClient.get;
